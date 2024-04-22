@@ -21,15 +21,62 @@
         </div>
         <div class="right-container">
             <div class="mainBackground">
-                <h6>
-                    This is not a real online service! You know you need something like this in your life 
-                    to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.
-                </h6>
-                <h6>
-                    You know you want to.
-                </h6>
+                <div class="topPart">
+                    <div class="topText">
+                        This is not a real online service! You know you need something<br> like this in your life 
+                        to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started.<br><br>
+                        You know you want to.
+                    </div>
+                </div>
+                <div class="boxShadow">
+                    <div class="mainText">
+                        Let's do this!
+                    </div>
+                    <div class="first-input">
+                        <form>
+                            <label for="first_name">FIRST NAME</label><br>
+                            <input type="text" id="first_name" name="first_name" pattern="^[^0-9]+$" 
+                                title="Your name should not have numbers in it" required>
+                        </form>
+                        <form>
+                            <label for="last_name">LAST NAME</label><br>
+                            <input type="text" id="last_name" name="last_name" pattern="^[^0-9]+$" 
+                                title="Your name should not have numbers in it" required>
+                        </form>
+                    </div>
+                    <div class="second-input">
+                        <form>
+                            <label for="email">EMAIL</label><br>
+                            <input type="text" id="email" name="email" 
+                            title="Please enter an email" required>
+                        </form>
+                        <form>
+                            <label for="phone_number">PHONE NUMBER</label><br>
+                            <input type="text" id="phone_number" name="phone_number" pattern="\d{3}[ -.]?\d{3}[ -.]?\d{4}"
+                                title="Your phone number should have 10 digits separated by dash (-), dot (.) or space ( ) " required>
+                        </form>
+                    </div>
+                    <div class="last-input">
+                        <form>
+                            <label for="password">PASSWORD</label><br>
+                            <input type="text" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*\W|_)[a-zA-Z\d\W_]{8,}" 
+                            title="You should have at least 1 Uppercase, 1 Lowercase, 1 Special Character and at least 8 Characters" required>
+                        </form>
+                        <form>
+                            <label for="confirm_password">CONFIRM PASSWORD</label><br>
+                            <input type="text" id="confirm_password" name="confirm_password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*\W|_)[a-zA-Z\d\W_]{8,}"
+                            title="You should have at least 1 Uppercase, 1 Lowercase, 1 Special Character and at least 8 Characters" onkeyup='check();' required>
+                            <span id="message"></span>
+                        </form>
+                    </div>
+                </div>
+                <div class="bottomPart">
+                    <button type="submit" id="createAccount">Create Account</button>
+                    <div class="bottomText">Already have an account? <span style="color: #596D48; font-weight: 700;"> Log in</div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
